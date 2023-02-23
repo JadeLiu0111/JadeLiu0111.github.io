@@ -4,11 +4,680 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>芳瑜的個人網站</title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<div class="wrapper">
-		<h1>GIT 測試</h1>
-		<a href="works.html">作品集</a>
+		<div class="main_bg">
+			<img id="bg_element01" src="img/bg01.png" alt="">
+		</div>
+		<header class="header">
+			<div class="nav_space"></div>
+			<div class="nav">
+				<div class="container row nav_content">
+					<div class="row">
+						<a class="nav_item" onclick="scroll_intro()">Resume</a>
+						<a class="nav_item" onclick="scroll_skills()">Skill</a>
+						<a class="nav_item" onclick="scroll_services()">Services</a>
+						<a class="nav_item" onclick="scroll_qualification()">Qualification</a>
+						<a class="nav_item" onclick="scroll_portfolio()">Portfolio</a>
+					</div>
+					<div class="row">
+						<a class="nav_item" onclick="scroll_contact()">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div id="intro" class="intro row">
+				<div class="container">
+					<div class="row">
+						<div class="intro_image">
+							<img src="img/self-image-bg.png" data-speed="-4" class="moveobj">
+							<img src="img/self-image.png">					
+						</div>
+						<div>
+							<div class="intro_title">
+								<div>你好，我是<span class="u-ml-32 color-main">劉芳瑜</span></div>
+								<div>Hi, I'm Jade Liu</div>
+							</div>
+							<div class="intro_offer row">
+								<div class="u-mr-32">
+									<span>使用者體驗研究者</span><br>
+									<span>User Experience Researcher</span>
+								</div>
+								<div class="u-mr-32">
+									<span>平面、多媒體設計師</span><br>
+									<span>Graphic and Digital Designer</span>
+								</div>
+								<div>
+									<span>教育者</span><br>
+									<span>Educator</span>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="intro_scroll row">
+					<svg id="mouse" class="u-mr-16">					
+						<rect x="2" y="2" rx="14" ry="14" width="28" height="44"/>
+						<line x1="16" y1="10" x2="16" y2="18">
+							<animateTransform 
+							attributeName="transform" 
+							type="translate" 
+							values="0,0;0,10;0,0"
+  							dur="2s"
+							keyTimes="0;0.8;1"
+  							repeatCount="indefinite"
+							/>
+						</line>
+					</svg>
+					<span class="content_title u-mr-16">Scroll down</span>
+					<span class="material-symbols-rounded pt-8 bd-20">arrow_downward</span>
+				</div>
+			</div>			
+			<div id="skills" class="container">
+				<div class="title">Skills</div>
+				<div class="subtitle">My techical level</div>
+				<div class="content">
+					<div class="skill_box">
+						<div class="content_title">Frontend developer</div>
+						<div class="skill_item row">
+							<div class="content_title">HTML</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">CSS/SASS</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">JavaScript</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">Bootstrap</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">Git</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">React</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+					</div>
+					<div class="skill_box">
+						<div class="content_title">Designer</div>
+						<div class="skill_item row">
+							<div class="content_title">illustrator</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">Photoship</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">After Effects</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">Premiere</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">3D max</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">Maya</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">SolidWorks</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+						<div class="skill_item row">
+							<div class="content_title">AutoCAD</div>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5" style="stroke: #368F8B;"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+							<svg class="level"><line x1="5" y1="5" x2="45" y2="5"/></svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="services" class="container">
+				<div class="title">Services</div>
+				<div class="subtitle">What I offer</div>
+				<div class="content">
+					<div class="service_box">
+						<div>
+							<span class="material-symbols-rounded md-36">space_dashboard</span>
+							<span class="material-symbols-rounded md-36">code</span>
+						</div>
+						<div class="content_title">
+							<span>Web</span><br>
+							<span>Designer</span>
+						</div>						
+						<div class="more" onclick="pop_web()">
+							<span class="more_text u-mr-8">View More</span>
+							<span class="material-symbols-rounded">arrow_forward</span>
+						</div>
+					</div>
+					<div class="service_box">
+						<div>
+							<span class="material-symbols-rounded md-36">library_books</span>
+							<span class="material-symbols-rounded md-36">search</span>
+						</div>
+						<div class="content_title">
+							<span>UX</span><br>
+							<span>Researcher</span>
+						</div>						
+						<div class="more" onclick="pop_ux()">
+							<span class="more_text u-mr-8">View More</span>
+							<span class="material-symbols-rounded">arrow_forward</span>
+						</div>
+					</div>
+					<div class="service_box">
+						<div>
+							<span class="material-symbols-rounded md-36">design_services</span>
+							<span class="material-symbols-rounded md-36">image</span>
+							<span class="material-symbols-rounded md-36">theaters</span>
+							<span class="material-symbols-rounded md-36">view_in_ar</span>
+						</div>
+						<div class="content_title">
+							<span>Graphic & Media</span><br>
+							<span>Designer</span>
+						</div>						
+						<div class="more" onclick="pop_designer()">
+							<span class="more_text u-mr-8">View More</span>
+							<span class="material-symbols-rounded">arrow_forward</span>
+						</div>
+					</div>
+					<div class="service_box">
+						<div>
+							<span class="material-symbols-rounded md-36">cast_for_education</span>
+							<span class="material-symbols-rounded md-36">calculate</span>
+						</div>
+						<div class="content_title">
+							<span>Educator</span><br>
+							<span>&nbsp</span>
+						</div>						
+						<div class="more" onclick="pop_edu()">
+							<span class="more_text u-mr-8">View More</span>
+							<span class="material-symbols-rounded">arrow_forward</span>
+						</div>
+					</div>
+				</div>
+				<div id="service-web" class="lightbox row disable">
+					<div class="lightbox_bg" onclick="close_pop2(this)"></div>
+					<div class="lightbox_content">
+						<span class="material-symbols-rounded lightbox_close" onclick="close_pop(this)">close</span>
+						<div class="content_title lightbox_title">Web Designer</div>
+						<ui>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>以使用者體驗出發的UI界面設計</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>網頁前端切版及架構</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>SEO分析優化</span>
+							</li>
+						</ui>
+					</div>
+				</div>
+				<div id="service-ux" class="lightbox row disable">
+					<div class="lightbox_bg" onclick="close_pop2(this)"></div>
+					<div class="lightbox_content">
+						<span class="material-symbols-rounded lightbox_close" onclick="close_pop(this)">close</span>
+						<div class="content_title lightbox_title">UX Researcher</div>
+						<div class="content_text lightbox_text">瞭解使用者經驗研究流程與方法，包含質性與量化研究方法，進行使用性評估、服務藍圖設計等</div>
+						<ui>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>個案/焦點團體訪談</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>建立典型任務觀察法</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>易用性問卷</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>實驗研究法分析</span>
+							</li>
+						</ui>
+					</div>
+				</div>
+				<div id="service-designer" class="lightbox row disable">
+					<div class="lightbox_bg" onclick="close_pop2(this)"></div>
+					<div class="lightbox_content">
+						<span class="material-symbols-rounded lightbox_close" onclick="close_pop(this)">close</span>
+						<div class="content_title lightbox_title">Graphic & Media Designer</div>
+						<ui>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>平面設計</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>攝影/影音剪輯</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>2D製圖/3D建模</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>互動式多媒體設計</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>插畫/手繪圖/油漆刊版/國畫</span>
+							</li>
+						</ui>
+					</div>
+				</div>
+				<div id="service-edu" class="lightbox row disable">
+					<div class="lightbox_bg" onclick="close_pop2(this)"></div>
+					<div class="lightbox_content">
+						<span class="material-symbols-rounded lightbox_close" onclick="close_pop(this)">close</span>
+						<div class="content_title lightbox_title">Educator</div>
+						<ui>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>數位學習</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>遊戲式/任務式學習</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>國中小數學教學</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>平面、多媒體教學(高職)</span>
+							</li>
+							<li class="content_text row lightbox_item">
+								<span class="material-symbols-rounded u-ml-16 u-mr-8">check_circle</span>
+								<span>華語教學</span>
+							</li>
+						</ui>
+					</div>
+				</div>
+			</div>
+			<div id="qualification">	
+				<div class="main_bg">
+					<div class="bg_element02--left">
+						<div class="bg_element03 moveobj" data-speed="2"></div>
+						<div class="bg_element04 moveobj" data-speed="-5"></div>
+					</div>
+					<div class="bg_element02--right"></div>
+				</div>
+				<div class="container">
+					<div class="title">Qualification</div>
+					<div class="subtitle">My personel journey</div>
+					<div class="content">
+						<div class="row options_box">
+							<div id="qualification_option--edu" class="row u-mr-32 qualification_option qualification_option--current" onclick="turn_edu()">
+								<span class="material-symbols-rounded md-36 u-mr-8">school</span>
+								<span class="content_title">Education</span>
+							</div>
+							<div id="qualification_option--exp" class="row qualification_option" onclick="turn_exp()">
+								<span class="material-symbols-rounded md-36 u-mr-8">home_repair_service</span>
+								<span class="content_title">Experience</span>
+							</div>
+						</div>
+						<div id="qualification_edu">
+							<div class="qualification_majoritem--left">
+								<div>國立雲林科技大學</div>
+								<div class="content_text">
+									<span>數位媒體設計系 碩士班</span><br>
+									<span>108級中等教育師資培育生</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2018.09 - 2022.01</span>
+								</div>
+							</div>
+							<div class="qualification_minoritem--left">
+								<div class="content_text">
+									<span>國立雲林科技大學推廣教育中心</span><br>
+									<span>華語師資證照班第10期</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2019.09 - 2020.01</span>
+								</div>
+							</div>
+							<div class="qualification_majoritem--right">
+								<div>國立臺中教育大學​</div>
+								<div class="content_text">
+									<span>數位內容科技學系</span><br>
+									<span>108級中等教育師資培育生</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2014 - 2018</span>
+								</div>
+							</div>
+							<div class="qualification_minoritem--right">
+								<div class="content_text">
+									<span>國立臺中教育大學進修推廣部</span><br>
+									<span>106秋-釉上瓷器彩繪課程</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2017.10 - 2017.12</span>
+								</div>
+							</div>
+							<div class="qualification_minoritem--right">
+								<div class="content_text">
+									<span>臺中市大墩文化中心</span><br>
+									<span>藝文研習課程-膠彩畫​</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2017.02 - 2017.07</span>
+								</div>
+							</div>
+							<div class="qualification_majoritem--left">
+								<div>國立台南女子高級中學</div>
+								<div class="content_text">
+									<span>普通科 第三類組</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2011 - 2014</span>
+								</div>
+							</div>
+						</div>
+						<div id="qualification_exp" class="disable">
+							<div class="qualification_majoritem--left">
+								<div>新鉅峰國際科技有限公司</div>
+								<div class="content_text">
+									<span>UI/UX 設計師</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2022.04 - 2022.12</span>
+								</div>
+							</div>
+							<div class="qualification_majoritem--right">
+								<div>奧林匹克文化事業股份有限公司</div>
+								<div class="content_text">
+									<span>兼職一對一數學老師</span>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2021.12 - Present</span>
+								</div>
+							</div>
+							<div class="qualification_majoritem--left">
+								<div>國立雲林科技大學</div>
+								<div class="content_text">
+									<ul class="qualification_list">
+										<li class="qualification_item">擔任&emsp;107學年第二學期華語學伴</li>
+										<li class="qualification_item">自組語言交換團體活動</li>
+										<li class="qualification_item">擔任&emsp;教育部計畫兼任助理</li>
+										<li class="qualification_item detail">(計畫名稱：配合新課程綱要統一入學測驗設計群專業科目(一)素養導向評量試題研究案)</li>
+									</ul>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2019 - 2021</span>
+								</div>
+							</div>
+							<div class="qualification_majoritem--right">
+								<div>國立臺中教育大學</div>
+								<div class="content_text">
+									<ul class="qualification_list">
+										<li class="qualification_item">擔任&emsp;國立臺中教育大學數位內容科技學系107級</li>
+										<li class="qualification_item detail">《數位浪潮 Suit Wave》畢業專題展覽籌會總召</li>
+										<li class="qualification_item">擔任&emsp;科技部計畫兼任助理</li>
+										<li class="qualification_item detail">(計畫名稱：互動卡片遊戲設計與研究-以昆蟲食物網為例)</li>
+										<li class="qualification_item">擔任&emsp;教育部計畫兼任助理</li>
+										<li class="qualification_item detail">(計畫名稱：106年度智慧生活整合創新教學聯盟推動計畫-智慧科技與產業創新跨校教學聯盟)</li>
+										<li class="qualification_item">擔任&emsp;國立臺中教育大學數位內容科技學系</li>
+										<li class="qualification_item detail">第十二屆系學會幹部―執行秘書</li>
+										<li class="qualification_item">擔任&emsp;104學年度新活動活動主持人</li>
+										<li class="qualification_item">擔任&emsp;104學年度理學院科技月數位系總召</li>
+										<li class="qualification_item">擔任&emsp;104學年度聖誕晚會總召</li>
+										<li class="qualification_item">擔任&emsp;108級三系聯合迎新宿營服務員(美宣組)</li>
+									</ul>
+								</div>
+								<div class="content_text row">
+									<span class="material-symbols-rounded u-mr-8">calendar_month</span>
+									<span>2014 - 2018</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="portfolio" class="container">
+				<div class="title">Portfolio</div>
+				<div class="subtitle">My works</div>
+				<div class="content">
+					<div class="row options_box">
+						<button id="bt_all" class="content_title portfolio_option portfolio_option--current" onclick="trueAll()">All</button>
+						<button id="bt_research" class="content_title portfolio_option" onclick="turn_research()">Research</button>
+						<button id="bt_design" class="content_title portfolio_option" onclick="turn_design()">Design</button>
+						<button id="bt_video" class="content_title portfolio_option" onclick="turn_video()">Video</button>
+						<button id="bt_teach" class="content_title portfolio_option" onclick="turn_teach()">Teach</button>
+					</div>
+					<div class="portfolio_works row">
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-ux01.jpg" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">使用者經驗研究</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-ux02.jpg" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">服務藍圖設計</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-ui01.png" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">UI設計</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-banner01.png" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">平面設計</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-photo01.jpg" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">攝影作品</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-3D01.jpg" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">3D建模</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-film01.png" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">影片製作</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-tabletop01.png" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">桌遊設計</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio_workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-teach01.jpg" alt="">
+								</div>								
+							</div>
+							<div class="portfolio_mask row">
+								<div class="portfolio_mask--title">教學演練</div>
+								<div class="more">
+									<span class="more_text u-mr-8">View More</span>
+									<span class="material-symbols-rounded">arrow_forward</span>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="workbox">
+							<div class="image_box">
+								<div class="image_fit">
+									<img class="image" src="img/work-teach01.jpg" alt="">
+								</div>								
+							</div>
+							<div class="workbox_title">教學演練</div>
+							<div class="more">
+								<span class="more_text u-mr-8">Show More</span>
+								<span class="material-symbols-rounded">arrow_forward</span>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="footer" class="row">
+				<div class="footer_tel row">
+					<a href="tel:+886-911355699"></a>
+					<span class="material-symbols-rounded u-mr-8">call</span>
+					<span>+886 911355699</span>
+				</div>
+				<div class="footer_email row">
+					<a href="mailto:jadeliu0111@gmail.com"></a>
+					<span class="material-symbols-rounded u-mr-8">mail</span>
+					<span>jadeliu0111@gmail.com</span>
+				</div>
+				<div>
+					Copyright © 2023 Liu, Fang-yu. All rights reserved.
+				</div>
+			</div>
+		</footer>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

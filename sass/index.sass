@@ -1,0 +1,433 @@
+@import "public.sass"
+
+// Text
+.title
+    display: flex
+    justify-content: center
+    font-size: 32px
+    font-weight: 600
+    margin: 96px 0 12px 0
+    letter-spacing: 0.5px
+.subtitle
+    display: flex
+    justify-content: center
+    font-size: 20px
+    color: $textgray
+    // margin-bottom: 48px
+.content
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-wrap: wrap
+    padding: 64px 0
+.content_title
+    font-size: 20px
+    font-weight: 600
+    letter-spacing: 0.5px
+.content_text
+    font-size: 18px
+    text-align: justify
+
+// Svg
+#mouse
+    width: 32px
+    height: 48px
+    stroke: $textblack
+    stroke-width: 2.5
+    stroke-linecap: round
+    & rect
+        fill: none
+.level
+    width: 50px
+    height: 10px
+    stroke: #dbdbdb
+    stroke-width: 5
+    stroke-linecap: round
+
+
+    
+// IconFonts
+.material-symbols-rounded.pt-8
+    padding-top: 8px
+.material-symbols-rounded.md-36
+    font-size: 36px
+    font-weight: 100
+.material-symbols-rounded.bd-20
+    font-size: 20px
+    font-weight: 600
+
+// 背景
+
+#bg_element01
+    width: 100%
+    top: 50vh
+    opacity: 0
+@mixin bg_element02
+    height: 90vh
+    width: 90vh
+    border-radius: 50%
+    background-color: $desert-sand
+    position: absolute
+    top: 10%
+.bg_element02--left
+    @include bg_element02
+    left: -70vh
+.bg_element02--right
+    @include bg_element02
+    left: calc( 100% - 20vh )
+@mixin bg_square($w, $h)
+    width: $w
+    height: $h
+    border-radius: 10%
+    background-color: rgba(36, 106, 115, 0.5)
+    position: absolute
+.bg_element03
+    @include bg_square(15vh, 15vh)
+    top: 60%
+    right: -50px
+.bg_element04
+    @include bg_square(8vh, 8vh)
+    top: 76%
+    right: -150px
+    
+/* -------------------- */
+//--- Navbar ---//
+/* -------------------- */
+.header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.nav_space
+    height: 56px
+.nav
+    background-color: $bgc-main
+    position: sticky
+    position: -webkit-sticky
+    top: 0
+    z-index: 50
+    width: 100%
+    .nav_content
+        justify-content: space-between
+.nav_item
+    font-size: 28px
+    padding: 16px 24px
+    transition: 0.5s
+    cursor: pointer
+    &:hover
+        color: $dark-cyan
+        transform: scale(1.05)
+
+
+/* -------------------- */
+//--- Intro ---//
+/* -------------------- */
+#intro
+    background-color: $bgc-main
+    height: 100vh
+.intro_image
+    & :nth-child(1)
+        position: absolute
+        top: 250px
+        left: -50px
+        width: 480px
+        object-fit: cover
+    & :nth-child(2)
+        height: 460px
+
+.intro_title
+    font-size: 48px
+
+.intro_offer
+    font-size: 22px
+    margin-top: 64px
+
+.intro_scroll
+    width: 100%
+    justify-content: center
+    position: absolute
+    bottom: 24px
+
+
+//--- Skills ---//
+.skill_box
+    background-color: #fff
+    border: 1px solid $border
+    border-radius: 10px
+    padding: 16px 48px
+    display: inline-block
+    margin: 0 24px
+    & > :first-child
+        display: flex
+        justify-content: center
+        margin: 16px 0
+.skill_item
+    padding: 12px 0
+    & > :first-child
+        width: 128px
+
+/* -------------------- */
+//--- Services ---//
+/* -------------------- */
+.service_box
+    display: inline-block
+    border-radius: 10px
+    border: 1px solid $border
+    background-color: $bgc-main
+    padding: 72px 32px 32px
+    width: 240px
+    margin: 0 16px
+    & > div
+        margin: 16px 0
+.more
+    display: flex
+    cursor: pointer
+    .more_text, .material-symbols-rounded
+        color: $textgray
+    &:hover
+        .more_text, .material-symbols-rounded
+            color: $dark-cyan
+        .material-symbols-rounded
+            margin-left: 8px
+            transition: 0.5s
+
+.lightbox
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    z-index: 60    
+    justify-content: center
+    transition: 0.5s
+    .lightbox_bg
+        position: fixed
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.2)
+    .lightbox_content
+        background-color: #fff
+        border: 1px solid $border
+        border-radius: 20px
+        width: 400px
+        padding: 24px 24px 36px 24px
+        .lightbox_close
+            left: calc( 100% - 24px )
+            color: $textgray
+            font-weight: 600
+            cursor: pointer        
+        .lightbox_title
+            display: flex
+            justify-content: center
+            padding: 12px 0 16px 0
+        .lightbox_item
+            padding: 8px 0
+        .lightbox_text
+            padding: 0 16px
+            color: $textgray
+            margin-bottom: 16px
+
+
+/* -------------------- */
+//--- Qualification ---//
+/* -------------------- */
+.options_box
+    width: 100%
+    justify-content: center
+    margin-bottom: 48px
+.qualification_option
+    cursor: pointer
+    &:hover
+        span
+            color: $textblack
+            transform: scale(1.02)
+    span
+        color: $border
+        transition: 0.5s
+.qualification_option--current
+    span 
+        color: $textblack
+#qualification_edu
+    width: 640px
+    &::after
+        content: ""
+        position: absolute
+        top: 6px
+        left: calc( 50% - 2px )
+        width: 4px
+        height: 784px
+        background-color: $border
+#qualification_exp
+    width: 896px
+    &::after
+        content: ""
+        position: absolute
+        top: 6px
+        left: calc( 50% - 2px )
+        width: 4px
+        height: 608px
+        background-color: $border
+@mixin qualification_majoritem
+    margin-bottom: 32px
+    width: 50%
+    padding: 0 32px
+    font-size: 24px
+    z-index: 30
+    opacity: 0
+    & > :nth-child(2)
+        margin: 16px 0
+    span
+        line-height: 1.5
+    &::after
+        content: " "
+        position: absolute
+        top: 6px
+        right: -8px
+        width: 16px
+        height: 16px
+        background-color: $dark-cyan
+        border-radius: 50%
+        z-index: 5
+@mixin qualification_minoritem
+    margin-bottom: 32px
+    width: 50%
+    padding-left: 32px
+    opacity: 0
+    & > :nth-child(1)
+        margin-bottom: 16px
+    span
+        color: $textgray
+        line-height: 1.5
+    &::after
+        content: " "
+        position: absolute
+        top: 5px
+        right: -5px
+        width: 10px
+        height: 10px
+        background-color: $border
+        border-radius: 50%
+        z-index: 5
+.qualification_majoritem--left
+    @include qualification_majoritem
+    left: -100px
+.qualification_majoritem--right
+    @include qualification_majoritem
+    left: calc( 50% + 100px )
+    &::after
+        left: -8px
+.qualification_minoritem--left
+    @include qualification_minoritem
+    left: -100px
+.qualification_minoritem--right
+    @include qualification_minoritem
+    left: calc( 50% + 100px  )
+    &::after
+        left: -5px
+.qualification_list
+    padding: 0
+.qualification_item
+    line-height: 1.5
+.qualification_item.detail
+    padding-left: 3em
+
+
+/* -------------------- */
+//--- portfolio ---//
+/* -------------------- */
+.portfolio_option
+    padding: 8px 16px
+    border-radius: 8px
+    background-color: $bgc
+    margin: 0 8px
+    cursor: pointer        
+    &:hover
+        color: #fff
+        background-color: $dark-cyan
+    // &:focus
+    //     color: #fff
+    //     background-color: $dark-cyan
+.portfolio_option--current
+    color: #fff
+    background-color: $dark-cyan
+.portfolio_works
+    width: 100%
+    // justify-content: center
+    // display: flex
+// .workbox
+//     background-color: #fff
+//     border: 1px solid $border
+//     border-radius: 10px
+//     width: 30%
+//     margin: 16px
+//     padding: 24px
+.portfolio_workbox
+    width: 30%
+    margin: 16px
+    cursor: pointer
+    overflow: hidden
+    border-radius: 16px
+    .portfolio_mask
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: -100%
+        background-color: rgba(36, 106, 115, 0)
+        transition: 0.5s
+        flex-wrap: wrap
+        padding: 0 32px
+        align-content: center
+        .portfolio_mask--title
+            width: 100%
+            color: #fff
+            font-size: 22px
+        .more
+            margin: 16px 0
+            span
+                color: #FFF
+    &:hover
+        .portfolio_mask
+            left: 0
+            background-color: rgba(36, 106, 115, 0.8)
+            
+.image_box
+    width: 100%
+.image_fit
+    width: 100%
+    height: 0
+    padding-top: calc( 100% * 3/4 )
+.image
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    object-fit: cover
+    display: block
+    border-radius: 16px
+.workbox_title
+    font-size: 20px
+    margin: 16px 0
+
+/* -------------------- */
+//--- footer ---//
+/* -------------------- */
+#footer
+    width: 100%
+    background-color: $bgc-main
+    justify-content: center
+    padding: 32px 0
+    .footer_tel, .footer_email
+        margin: 0 24px
+        font-size: 18px
+        letter-spacing: 1.5
+        a
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            cursor: pointer
+            z-index: 40
