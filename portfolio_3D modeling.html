@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Modeling-芳瑜的個人網站</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/graphic.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main_bg">
+			<div class="bg_el--L moveobj" data-speed="-4"></div>
+			<div class="bg_el--M moveobj" data-speed="6"></div>
+		</div>
+		<nav class="navbar container row">
+			<div class="main_title">Portfolio</div>
+			<a href="index.html" class="subtitle">Back portfolio</a>
+		</nav>
+        <section class="container">
+			<div class="u-mb-48">
+				<div class="title">模型復刻-千陽號</div>
+				<hr>
+				<div class="row content_imgs">
+					<div class="swiper mySwiper modeling">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="img/3D/boat/boat_01.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_04.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_05.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_07.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_08.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/boat/boat_10.jpg" alt=""></div>
+						</div>
+						<div class="swiper-button-next"></div>
+    					<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="u-mb-48">
+				<div class="title">角色設計</div>
+				<hr>
+				<div class="row content_imgs">
+					<div class="swiper mySwiper modeling">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="img/3D/penguin/penguin_01.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/penguin/penguin_02.png" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/penguin/penguin_03.png" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/penguin/penguin_04.png" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/penguin/penguin_05.png" alt=""></div>
+						</div>
+						<div class="swiper-button-next"></div>
+    					<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="u-mb-48">
+				<div class="title">人臉建模</div>
+				<hr>
+				<div class="row content_imgs">
+					<div class="swiper mySwiper modeling">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="img/3D/face/face_01.png" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/face/face_02.png" alt=""></div>
+							<div class="swiper-slide"><img src="img/3D/face/face_03.png" alt=""></div>
+						</div>
+						<div class="swiper-button-next"></div>
+    					<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+        </section>
+        <footer>
+			<div id="footer" class="row">
+				<div class="footer_tel row">
+					<a href="tel:+886-911355699"></a>
+					<span class="material-symbols-rounded u-mr-8">call</span>
+					<span>+886 911355699</span>
+				</div>
+				<div class="footer_email row">
+					<a href="mailto:jadeliu0111@gmail.com"></a>
+					<span class="material-symbols-rounded u-mr-8">mail</span>
+					<span>jadeliu0111@gmail.com</span>
+				</div>
+				<div>
+					Copyright © 2023 Liu, Fang-yu. All rights reserved.
+				</div>
+			</div>
+		</footer>
+    </div>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script>
+		let swiper = new Swiper(".mySwiper", {
+			slidesPerView: "auto",
+			centeredSlides: true,
+			spaceBetween: 48,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "bullets",
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+	</script>
+</body>
+</html>

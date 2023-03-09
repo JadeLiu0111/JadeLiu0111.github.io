@@ -61,14 +61,40 @@ img
     -webkit-user-drag: none
 
 // Container
+@mixin mobile_max
+    @media ( max-width: 767px )
+        @content
+@mixin pad_max
+    @media ( max-width: 992px )
+        @content
+@mixin min_desktop_max
+    @media ( max-width: 1200px )
+        @content
+@mixin mobile
+    @media ( min-width: 360px )
+        @content 
+@mixin pad
+    @media ( min-width: 768px )
+        @content
+@mixin min_desktop
+    @media ( min-width: 992px )
+        @content
+@mixin desktop
+    @media ( min-width: 1200px )
+        @content    
+
+    
 .wrapper
     width: 100%
-    // overflow: hidden
 // 置中容器
 .container
-    width: 1170px
     margin: 0 auto
-    // height: 100%
+    @include pad
+        width: 750px
+    @include min_desktop
+        width: 970px
+    @include desktop
+        width: 1170px
 .row
     display: flex
     flex-wrap: wrap
@@ -87,6 +113,10 @@ img
     margin-right: 16px
 .u-mr-32
     margin-right: 32px
+.u-pl-16
+    padding-left: 16px
+.u-mb-48
+    margin-bottom: 48px
 .color-main
     color: $ming
 
@@ -104,3 +134,38 @@ img
     height: 100%
     overflow: hidden
     background-color: $bgc
+
+.link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+/* -------------------- */
+//--- footer ---//
+/* -------------------- */
+#footer
+    width: 100%
+    background-color: $bgc-main
+    justify-content: center
+    padding: 32px 0
+    .footer_tel, .footer_email
+        margin: 0 24px
+        font-size: 18px
+        letter-spacing: 1.5
+        a
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            cursor: pointer
+            z-index: 40
+.material-symbols-rounded
+    vertical-align: middle
+.material-symbols-rounded.hover
+    &:hover
+        color: $dark-cyan
+.material-symbols-rounded.md-32
+    font-size: 32px

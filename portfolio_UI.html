@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Design-芳瑜的個人網站</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/UIDesign.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main_bg">
+			<div class="bg_el--L moveobj" data-speed="-4"></div>
+			<div class="bg_el--M moveobj" data-speed="6"></div>
+		</div>
+		<nav class="navbar container row">
+			<div class="main_title">Portfolio</div>
+			<a href="index.html" class="subtitle">Back portfolio</a>
+		</nav>
+		<div class="container">
+			<div class="title">UI Design</div>
+			<div class="options_box">
+				<div id="OPT_btn" class="option option--current" onclick="turn_opt()">App介面優化</div>
+				<div id="UI_btn" class="option" onclick="turn_UI()">應用程式操作介面設計</div>
+			</div>
+		</div>
+        <section id="optimization" class="container">
+            <div class="content_title">舊介面問題分析</div>
+			<hr>
+			<div class="problem">
+				<img class="problem_img" src="img/UI/UI-01.png" alt="">
+				<img class="problem_img--mobile" src="img/UI/UI-02.png" alt="">
+				<div class="problem_title item1">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">首頁單調，無功能指引</div>
+				</div>
+				<div class="problem_title item2">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">測選單雜亂，功能重複</div>					
+				</div>
+				<div class="problem_title item3">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">項目細項易讀性不佳</div>					
+				</div>
+				<div class="problem_title item4">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">搜尋清單項目過小，不易閱讀及選擇</div>					
+				</div>
+				<div class="problem_title item5">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">項目圖片變形，<br>混淆識別</div>					
+				</div>
+				<div class="problem_title item6">
+					<svg height="20" width="64">
+						<line x1="0" y1="12" x2="50" y2="12"/>
+						<circle cx="50" cy="12" r="5"/>
+					</svg>
+					<div class="content_text">系統操作流程頁面過多，<br>易導致系統崩潰</div>					
+				</div>
+				<div class="problem_title item7">
+					<div class="content_text">連線失敗時，<br>系統狀態的能見度差</div>					
+					<svg height="20" width="64">
+						<circle cx="12" cy="12" r="5"/>
+						<line x1="17" y1="12" x2="67" y2="12"/>
+					</svg>
+				</div>
+				<div class="problem_title item8">
+					<div class="content_text">系統指示不明顯</div>
+					<svg height="20" width="64">
+						<circle cx="12" cy="12" r="5"/>
+						<line x1="17" y1="12" x2="67" y2="12"/>
+					</svg>
+				</div>
+			</div>
+			<div class="after">
+				<div class="ui-bg">
+					<div class="ui-bg_circle"></div>
+				</div>
+				<div class="content_title">新介面優化</div>
+				<hr>
+				<div class="after_content">
+					<div class="after_item">
+						<img class="after_img" src="img/UI/IMed-01.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">將重要內容及功能放首頁，並新增圖示指引</div>
+						</div>
+					</div>
+					<div class="after_item">
+						<img class="after_img--menu" src="img/UI/IMed-02.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">合併重複功能</div>
+						</div>
+					</div>
+					<div class="after_item">
+						<img class="after_img" src="img/UI/IMed-03.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">搜尋清單放大，並使用自適應圖框，防止圖片變形</div>
+						</div>
+					</div>
+					<div class="after_item">
+						<img class="after_img" src="img/UI/IMed-04.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">重新排版圖文內容，提升易讀性</div>
+						</div>
+					</div>
+					<div class="after_item">
+						<img class="after_img" src="img/UI/IMed-05.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">改用彈跳視窗，代替分頁，提升系統效能</div>
+						</div>
+					</div>
+					<div class="after_item">
+						<img class="after_img" src="img/UI/IMed-06.png" alt="">
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">連線失敗，給予直覺警示</div>
+						</div>
+						<div class="flexBox">
+							<svg class="list" height="24" width="24"><circle cx="12" cy="12" r="5"/></svg>
+							<div class="content_text">將系統指示放置視線中央</div>
+						</div>
+					</div>
+				</div>
+				<div class="after_guide flexBox">
+					<div class="guide_item">
+						<div class="content_title" style="font-weight: 600;">Colors</div>
+						<img src="img/UI/UI-colors.png" alt="">
+					</div>
+					<div class="guide_item">
+						<div class="content_title" style="font-weight: 600;">Typography</div>
+						<div class="content_title f-inter">Inter</div>
+						<div class="title_detail f-inter">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+						<div class="content_title f-taipeiSans">台北黑體</div>
+						<div class="title_detail f-taipeiSans">鑑於對人類家庭所有成員的固有尊嚴及其平等的和不移的權利的承認，乃是世界自由、正義與和平的基礎</div>
+					</div>
+					<div class="guide_item">
+						<div class="content_title" style="font-weight: 600;">Icons</div>
+						<img src="img/UI/UI-icons.png" alt="">
+					</div>
+					<div class="guide_item--element">
+						<div class="content_title" style="font-weight: 600;">Element</div>
+						<div class="flexBox">
+							<img src="img/UI/IMed-El-01.png" alt="">
+							<img src="img/UI/IMed-El-02.png" alt="" style="height: 80px;">
+							<img src="img/UI/IMed-El-03.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		<section id="UIdesign" class="container disable ">
+			<div class="projet">
+				<div class="content_title">設計專案一</div>
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_01.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_02.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_03.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_04.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_05.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_06.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_07.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/queueManagement/queue_08.png" alt="">
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+    				<div class="swiper-button-prev"></div>
+    				<div class="swiper-pagination"></div>
+				</div>				
+			</div>
+			<div class="projet">
+				<div class="content_title">設計專案二</div>
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_01.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_02.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_03.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_04.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_05.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_06.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_07.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/UI/MedCapbinet/capbinet_08.jpg" alt="">
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+    				<div class="swiper-button-prev"></div>
+    				<div class="swiper-pagination"></div>
+				</div>				
+			</div>
+		</section>
+        <footer>
+			<div id="footer" class="row">
+				<div class="footer_tel row">
+					<a href="tel:+886-911355699"></a>
+					<span class="material-symbols-rounded u-mr-8">call</span>
+					<span>+886 911355699</span>
+				</div>
+				<div class="footer_email row">
+					<a href="mailto:jadeliu0111@gmail.com"></a>
+					<span class="material-symbols-rounded u-mr-8">mail</span>
+					<span>jadeliu0111@gmail.com</span>
+				</div>
+				<div>
+					Copyright © 2023 Liu, Fang-yu. All rights reserved.
+				</div>
+			</div>
+		</footer>
+    </div>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script>
+		// 選項轉換
+		const OPT = document.querySelector('#optimization');
+		const UIDesign = document.querySelector('#UIdesign');
+		const OPT_btn = document.querySelector('#OPT_btn');
+		const UI_btn = document.querySelector('#UI_btn');
+		function turn_opt(){
+			OPT.classList.remove('disable');
+			UIDesign.classList.add('disable');
+			OPT_btn.classList.add('option--current');
+			UI_btn.classList.remove('option--current');
+		};
+		function turn_UI(){
+			UIDesign.classList.remove('disable');
+			OPT.classList.add('disable');
+			UI_btn.classList.add('option--current');
+			OPT_btn.classList.remove('option--current');
+		};
+		// Swiper
+		let swiper = new Swiper(".mySwiper", {
+			slidesPerView: "auto",
+			centeredSlides: true,
+			spaceBetween: 48,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "bullets",
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			// loop: true,
+		});
+	</script>
+</body>
+</html>

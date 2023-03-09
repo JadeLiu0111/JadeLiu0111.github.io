@@ -54,8 +54,22 @@ img {
 }
 
 .container {
-  width: 1170px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 .row {
@@ -88,6 +102,14 @@ img {
   margin-right: 32px;
 }
 
+.u-pl-16 {
+  padding-left: 16px;
+}
+
+.u-mb-48 {
+  margin-bottom: 48px;
+}
+
 .color-main {
   color: #246a73;
 }
@@ -107,6 +129,46 @@ img {
   height: 100%;
   overflow: hidden;
   background-color: #F9F9F9;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+/* -------------------- */
+/* -------------------- */
+#footer {
+  width: 100%;
+  background-color: #f2e2d1;
+  justify-content: center;
+  padding: 32px 0;
+}
+#footer .footer_tel, #footer .footer_email {
+  margin: 0 24px;
+  font-size: 18px;
+  letter-spacing: 1.5;
+}
+#footer .footer_tel a, #footer .footer_email a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 40;
+}
+
+.material-symbols-rounded.hover:hover {
+  color: #368f8b;
+}
+
+.material-symbols-rounded.md-32 {
+  font-size: 32px;
 }
 
 .title {
@@ -646,27 +708,4 @@ img {
 .workbox_title {
   font-size: 20px;
   margin: 16px 0;
-}
-
-/* -------------------- */
-/* -------------------- */
-#footer {
-  width: 100%;
-  background-color: #f2e2d1;
-  justify-content: center;
-  padding: 32px 0;
-}
-#footer .footer_tel, #footer .footer_email {
-  margin: 0 24px;
-  font-size: 18px;
-  letter-spacing: 1.5;
-}
-#footer .footer_tel a, #footer .footer_email a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 40;
 }

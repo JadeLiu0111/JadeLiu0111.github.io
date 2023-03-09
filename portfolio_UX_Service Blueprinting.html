@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務藍圖設計-芳瑜的個人網站</title>
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main_bg">
+			<div class="bg_el--L moveobj" data-speed="-4"></div>
+			<div class="bg_el--M moveobj" data-speed="6"></div>
+		</div>
+		<nav class="navbar container row">
+			<div class="main_title">Portfolio</div>
+			<a href="index.html" class="subtitle">Back portfolio</a>
+		</nav>
+        <section>
+            <div class="row container">
+                <div class="content_image--left">
+					<div class="imagebox">
+						<div class="imagefit">
+							<img class="image" src="img/UX/UX_03.jpg" alt="">
+						</div>
+					</div>
+				</div>
+                <div class="content">
+                    <div class="title">服務藍圖設計</div>
+                    <div class="content_title">
+                        小墾丁渡假村─「在鳥居鄰里迷路」
+                    </div>
+                    <div class="title_detail">
+                        針對小墾丁渡假村周邊的地理環境，結合秋天候鳥遷徙季節，發展具有當地特色的賞鷹賞鳥活動，並深入探討當地的人文風情，規劃出一套完整的賞鳥旅遊活動，及其服務藍圖。
+                    </div>
+                </div>
+            </div>
+            <div class="container caontent_SB_image">
+                <div class="content_title u-pl-16">
+                    <span>點擊以查看大圖</span> 
+                    <span class="material-symbols-rounded md-32 u-ml-8">pinch_zoom_out</span>
+                </div>
+                <div class="pswp-gallery" id="my-gallery">
+                    <a
+                        href="img/UX/UX_SB_XL.jpg"
+                        data-pswp-width="10927"
+                        data-pswp-height="2200"
+                        target="_blank"
+                    >
+                        <img 
+                            class="image_L"
+                            src="img/UX/UX_SB_S.jpg"
+                            alt=""
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer>
+			<div id="footer" class="row">
+				<div class="footer_tel row">
+					<a href="tel:+886-911355699"></a>
+					<span class="material-symbols-rounded u-mr-8">call</span>
+					<span>+886 911355699</span>
+				</div>
+				<div class="footer_email row">
+					<a href="mailto:jadeliu0111@gmail.com"></a>
+					<span class="material-symbols-rounded u-mr-8">mail</span>
+					<span>jadeliu0111@gmail.com</span>
+				</div>
+				<div>
+					Copyright © 2023 Liu, Fang-yu. All rights reserved.
+				</div>
+			</div>
+		</footer>
+    </div>
+    <script src="js/main.js"></script>
+    <!-- PhotoSwipe插建 -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+        
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: '#my-gallery',
+          children: 'a',
+          pswpModule: () => import('https://unpkg.com/photoswipe'),
+        });
+        
+        lightbox.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design-芳瑜的個人網站</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  	<link rel="stylesheet" href="css/graphic.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main_bg">
+			<div class="bg_el--L moveobj" data-speed="-4"></div>
+			<div class="bg_el--M moveobj" data-speed="6"></div>
+		</div>
+		<nav class="navbar container row">
+			<div class="main_title">Portfolio</div>
+			<a href="index.html" class="subtitle">Back portfolio</a>
+		</nav>
+        <section class="container">
+			<div class="u-mb-48">
+				<div class="title">Banner設計</div>
+				<hr>
+				<div class="content_imgs" style="height: 350px;">
+					<div id="banner" class="swiper mySwiper">
+						<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_01.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_02.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_03.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_04.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_05.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_06.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="img/graphic/banner/banner_07.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="u-mb-48">
+				<div class="title">名片設計</div>
+				<hr>
+				<div id="nameCard" class="row content_imgs">
+					<div class="nameCard_box">
+						<div class="imgfit">
+							<img src="img/graphic/NameCard/namecard01.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="nameCard_box">
+						<div class="imgfit">
+							<img src="img/graphic/NameCard/namecard02.jpg" alt="" class="img">
+						</div>
+					</div>
+					<div class="nameCard_box">
+						<div class="imgfit">
+							<img src="img/graphic/NameCard/namecard03.jpg" alt="" class="img">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="u-mb-48">
+				<div class="title">地圖設計</div>
+				<hr>
+				<div class="content_imgs">
+					<img src="img/graphic/maps/map.jpg" alt="" class="map">
+				</div>
+				<div class="row">
+					<div class="map_Box">
+						<div class="imgfit"><img src="img/graphic/maps/map_01.png" alt="" class="img"></div>
+					</div>
+					<div class="map_Box">
+						<div class="imgfit"><img src="img/graphic/maps/map_02.png" alt="" class="img"></div>
+					</div>
+					<div class="map_Box">
+						<div class="imgfit"><img src="img/graphic/maps/map_03.png" alt="" class="img"></div>
+					</div>
+					<div class="map_Box">
+						<div class="imgfit"><img src="img/graphic/maps/map_04.png" alt="" class="img"></div>
+					</div>
+					<div class="map_Box">
+						<div class="imgfit"><img src="img/graphic/maps/map_05.png" alt="" class="img"></div>
+					</div>
+				</div>
+			</div>
+        </section>
+        <footer>
+			<div id="footer" class="row">
+				<div class="footer_tel row">
+					<a href="tel:+886-911355699"></a>
+					<span class="material-symbols-rounded u-mr-8">call</span>
+					<span>+886 911355699</span>
+				</div>
+				<div class="footer_email row">
+					<a href="mailto:jadeliu0111@gmail.com"></a>
+					<span class="material-symbols-rounded u-mr-8">mail</span>
+					<span>jadeliu0111@gmail.com</span>
+				</div>
+				<div>
+					Copyright © 2023 Liu, Fang-yu. All rights reserved.
+				</div>
+			</div>
+		</footer>
+    </div>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script>
+		let swiper = new Swiper("#banner", {
+			direction: "vertical",
+			mousewheel: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},			
+		});
+	</script>
+</body>
+</html>

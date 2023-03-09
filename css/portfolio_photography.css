@@ -1,0 +1,291 @@
+@import "../css/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
+@font-face {
+  font-family: "custom-sans-serif";
+  src: url("../fonts/jf-openhuninn-1.1.ttf");
+  unicode-range: U+4E00-9FFF;
+}
+/* -------------------- */
+/* -------------------- */
+* {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: #515052;
+}
+
+body {
+  font-family: "custom-sans-serif", "Zen Maru Gothic", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F9F9F9;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #515052;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.u-ml-8 {
+  margin-left: 8px;
+}
+
+.u-ml-16 {
+  margin-left: 16px;
+}
+
+.u-ml-32 {
+  margin-left: 32px;
+}
+
+.u-mr-8 {
+  margin-right: 8px;
+}
+
+.u-mr-16 {
+  margin-right: 16px;
+}
+
+.u-mr-32 {
+  margin-right: 32px;
+}
+
+.u-pl-16 {
+  padding-left: 16px;
+}
+
+.u-mb-48 {
+  margin-bottom: 48px;
+}
+
+.color-main {
+  color: #246a73;
+}
+
+.disable {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.main_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #F9F9F9;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+/* -------------------- */
+/* -------------------- */
+#footer {
+  width: 100%;
+  background-color: #f2e2d1;
+  justify-content: center;
+  padding: 32px 0;
+}
+#footer .footer_tel, #footer .footer_email {
+  margin: 0 24px;
+  font-size: 18px;
+  letter-spacing: 1.5;
+}
+#footer .footer_tel a, #footer .footer_email a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 40;
+}
+
+.material-symbols-rounded.hover:hover {
+  color: #368f8b;
+}
+
+.material-symbols-rounded.md-32 {
+  font-size: 32px;
+}
+
+.photo_mainBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  justify-content: space-between;
+}
+
+.main_title {
+  font-size: 48px;
+  padding: 40px 24px;
+  color: #f3dfc1;
+}
+@media (max-width: 767px) {
+  .main_title {
+    padding: 44px 16px 16px 16px;
+    font-size: 40px;
+  }
+}
+
+.subtitle {
+  font-size: 28px;
+  padding: 16px 24px;
+  transition: 0.5s;
+  border-radius: 36px;
+  border: 2px solid #808080;
+}
+.subtitle:hover {
+  transform: scale(1.05);
+  color: #f3dfc1;
+  background-color: #368f8b;
+  border: 0;
+}
+@media (max-width: 767px) {
+  .subtitle {
+    padding: 44px 16px 0 16px;
+    font-size: 18px;
+  }
+}
+
+.content_title {
+  font-family: Dancing Script;
+  font-size: 136px;
+  color: #368f8b;
+  width: 50%;
+  z-index: 50;
+  top: -8vh;
+  left: 288px;
+}
+
+.imagebox--main {
+  width: 50%;
+  padding: 0 0 0 48px;
+}
+.imagebox--main .imagefit {
+  width: 100%;
+  height: 0;
+  padding-top: 100vh;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.fallImage--left {
+  width: 50%;
+  display: flex;
+  padding: 0 48px 0 0;
+  flex-direction: column;
+}
+
+.fallImage--right {
+  width: 50%;
+  display: flex;
+  padding: 0 0 0 48px;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.photo {
+  width: 100%;
+  margin-top: 96px;
+  display: flex;
+}
+
+.photo.gray {
+  -webkit-filter: grayscale(1);
+}
+
+.col-1-2 {
+  width: 50%;
+}
