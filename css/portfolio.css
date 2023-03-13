@@ -175,6 +175,10 @@ img {
   font-size: 32px;
 }
 
+:root {
+  --swiper-theme-color: #368f8b;
+}
+
 .wrapper {
   overflow: hidden;
 }

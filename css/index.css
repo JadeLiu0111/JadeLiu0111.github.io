@@ -163,12 +163,20 @@ img {
   z-index: 40;
 }
 
+.material-symbols-rounded {
+  vertical-align: middle;
+}
+
 .material-symbols-rounded.hover:hover {
   color: #368f8b;
 }
 
 .material-symbols-rounded.md-32 {
   font-size: 32px;
+}
+
+:root {
+  --swiper-theme-color: #368f8b;
 }
 
 .title {
