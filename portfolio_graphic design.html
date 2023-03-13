@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphic Design-芳瑜的個人網站</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
   	<link rel="stylesheet" href="css/graphic.css">
 </head>
 <body>
@@ -41,20 +42,53 @@
 				<div class="title">名片設計</div>
 				<hr>
 				<div id="nameCard" class="row content_imgs">
-					<div class="nameCard_box">
-						<div class="imgfit">
-							<img src="img/graphic/NameCard/namecard01.jpg" alt="" class="img">
-						</div>
+					<div class="pswp-gallery nameCard_box my-gallery">
+						<a
+							href="img/graphic/NameCard/namecard01.jpg"
+							data-pswp-width="1170"
+							data-pswp-height="878"
+							target="_blank"
+						>
+							<div class="imgfit">
+								<img 
+								class="img"
+								src="img/graphic/NameCard/namecard01-S.jpg"
+								alt=""
+								/>
+							</div>							
+						</a>
 					</div>
-					<div class="nameCard_box">
-						<div class="imgfit">
-							<img src="img/graphic/NameCard/namecard02.jpg" alt="" class="img">
-						</div>
+					<div class="pswp-gallery nameCard_box my-gallery">
+						<a
+							href="img/graphic/NameCard/namecard02.jpg"
+							data-pswp-width="1170"
+							data-pswp-height="878"
+							target="_blank"
+						>
+							<div class="imgfit">
+								<img 
+								class="img"
+								src="img/graphic/NameCard/namecard02-S.jpg"
+								alt=""
+								/>
+							</div>							
+						</a>
 					</div>
-					<div class="nameCard_box">
-						<div class="imgfit">
-							<img src="img/graphic/NameCard/namecard03.jpg" alt="" class="img">
-						</div>
+					<div class="pswp-gallery nameCard_box my-gallery">
+						<a
+							href="img/graphic/NameCard/namecard03.jpg"
+							data-pswp-width="1170"
+							data-pswp-height="878"
+							target="_blank"
+						>
+							<div class="imgfit">
+								<img 
+								class="img"
+								src="img/graphic/NameCard/namecard03-S.jpg"
+								alt=""
+								/>
+							</div>							
+						</a>
 					</div>
 				</div>
 			</div>
@@ -102,6 +136,7 @@
 		</footer>
     </div>
 	<script src="js/main.js"></script>
+	<!-- Swiper插建 -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script>
 		let swiper = new Swiper("#banner", {
@@ -113,5 +148,17 @@
 			},			
 		});
 	</script>
+	<!-- PhotoSwipe插建 -->
+	<script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+        
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: '.my-gallery',
+          children: 'a',
+          pswpModule: () => import('https://unpkg.com/photoswipe'),
+        });
+        
+        lightbox.init();
+    </script>
 </body>
 </html>
