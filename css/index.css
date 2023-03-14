@@ -493,12 +493,54 @@ img {
   border-radius: 10px;
   border: 1px solid #CECECE;
   background-color: #f2e2d1;
-  padding: 72px 32px 32px;
-  width: 240px;
-  margin: 0 16px;
 }
 .service_box > div {
   margin: 16px 0;
+}
+@media (min-width: 768px) {
+  .service_box {
+    width: 168px;
+    padding: 64px 16px 16px;
+    margin: 0 8px;
+  }
+}
+@media (min-width: 992px) {
+  .service_box {
+    width: 200px;
+    padding: 64px 24px 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .service_box {
+    width: 240px;
+    padding: 72px 32px 32px;
+    margin: 0 16px;
+  }
+}
+@media (min-width: 768px) {
+  .service_box .material-symbols-rounded {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .service_box .material-symbols-rounded {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .service_box .material-symbols-rounded {
+    font-size: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .service_box .content_title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .service_box .content_title {
+    font-size: 20px;
+  }
 }
 
 .more {
@@ -507,6 +549,11 @@ img {
 }
 .more .more_text, .more .material-symbols-rounded {
   color: #808080;
+}
+@media (min-width: 768px) {
+  .more .material-symbols-rounded {
+    font-size: 20px;
+  }
 }
 .more:hover .more_text, .more:hover .material-symbols-rounded {
   color: #368f8b;

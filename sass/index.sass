@@ -216,16 +216,41 @@
     border-radius: 10px
     border: 1px solid $border
     background-color: $bgc-main
-    padding: 72px 32px 32px
-    width: 240px
-    margin: 0 16px
     & > div
         margin: 16px 0
+    @include pad
+        width: 168px
+        padding: 64px 16px 16px
+        margin: 0 8px
+    @include min_desktop
+        width: 200px
+        padding: 64px 24px 24px
+    @include desktop
+        width: 240px
+        padding: 72px 32px 32px
+        margin: 0 16px
+    .material-symbols-rounded
+        @include pad
+            font-size: 28px
+        @include min_desktop
+            font-size: 32px
+        @include desktop
+            font-size: 36px
+    .content_title
+        @include min_desktop
+            font-size: 18px
+        @include desktop
+            font-size: 20px
+
+        
 .more
     display: flex
     cursor: pointer
     .more_text, .material-symbols-rounded
         color: $textgray
+    .material-symbols-rounded
+        @include pad
+            font-size: 20px
     &:hover
         .more_text, .material-symbols-rounded
             color: $dark-cyan
