@@ -228,35 +228,6 @@ img {
   text-align: justify;
 }
 
-#mouse {
-  width: 32px;
-  height: 48px;
-  stroke: #515052;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-}
-#mouse rect {
-  fill: none;
-}
-@media (min-width: 768px) {
-  #mouse {
-    transform: scale(0.8);
-  }
-}
-@media (min-width: 992px) {
-  #mouse {
-    transform: scale(1);
-  }
-}
-
-.level {
-  width: 50px;
-  height: 10px;
-  stroke: #dbdbdb;
-  stroke-width: 5;
-  stroke-linecap: round;
-}
-
 .material-symbols-rounded.pt-8 {
   padding-top: 8px;
 }
@@ -378,6 +349,13 @@ img {
   height: 100vh;
 }
 
+.intro_content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .intro_image :nth-child(1) {
   position: absolute;
   -o-object-fit: cover;
@@ -385,14 +363,8 @@ img {
 }
 @media (min-width: 768px) {
   .intro_image :nth-child(1) {
-    top: 130px;
-    left: -50px;
-    width: 280px;
-  }
-}
-@media (min-width: 992px) {
-  .intro_image :nth-child(1) {
     top: 200px;
+    left: -50px;
     width: 400px;
   }
 }
@@ -403,11 +375,6 @@ img {
   }
 }
 @media (min-width: 768px) {
-  .intro_image :nth-child(2) {
-    height: 240px;
-  }
-}
-@media (min-width: 992px) {
   .intro_image :nth-child(2) {
     height: 360px;
   }
@@ -480,12 +447,32 @@ img {
   }
 }
 
+#mouse {
+  width: 32px;
+  height: 48px;
+  stroke: #515052;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+#mouse rect {
+  fill: none;
+}
+@media (min-width: 768px) {
+  #mouse {
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 992px) {
+  #mouse {
+    transform: scale(1);
+  }
+}
+
 .skill_box {
   background-color: #fff;
   border: 1px solid #CECECE;
   border-radius: 10px;
   display: inline-block;
-  margin: 0 24px;
 }
 .skill_box > :first-child {
   display: flex;
@@ -495,19 +482,55 @@ img {
 @media (min-width: 768px) {
   .skill_box {
     padding: 16px 32px;
+    margin: 0 16px;
   }
 }
 @media (min-width: 992px) {
   .skill_box {
     padding: 16px 48px;
+    margin: 0 24px;
   }
 }
 
 .skill_item {
   padding: 12px 0;
 }
-.skill_item > :first-child {
-  width: 128px;
+@media (min-width: 768px) {
+  .skill_item > :first-child {
+    width: 108px;
+  }
+}
+@media (min-width: 992px) {
+  .skill_item > :first-child {
+    width: 128px;
+  }
+}
+@media (min-width: 768px) {
+  .skill_item .content_title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .skill_item .content_title {
+    font-size: 20px;
+  }
+}
+
+.level {
+  height: 10px;
+  stroke: #dbdbdb;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+@media (min-width: 768px) {
+  .level {
+    width: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .level {
+    width: 50px;
+  }
 }
 
 /* -------------------- */
@@ -556,7 +579,7 @@ img {
     font-size: 36px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .service_box .content_title {
     font-size: 18px;
   }

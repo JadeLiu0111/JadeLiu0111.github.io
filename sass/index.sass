@@ -29,25 +29,8 @@
     font-size: 18px
     text-align: justify
 
-// Svg
-#mouse
-    width: 32px
-    height: 48px
-    stroke: $textblack
-    stroke-width: 2.5
-    stroke-linecap: round
-    & rect
-        fill: none
-    @include pad
-        transform: scale(0.8)
-    @include min_desktop
-        transform: scale(1)
-.level
-    width: 50px
-    height: 10px
-    stroke: #dbdbdb
-    stroke-width: 5
-    stroke-linecap: round
+
+
 
 
     
@@ -138,24 +121,24 @@
 #intro
     background-color: $bgc-main
     height: 100vh
+.intro_content
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: center
 .intro_image
     & :nth-child(1)
         position: absolute
         object-fit: cover
         @include pad
-            top: 130px
-            left: -50px
-            width: 280px
-        @include min_desktop
             top: 200px
+            left: -50px
             width: 400px
         @include desktop
             top: 250px
             width: 480px
     & :nth-child(2)
         @include pad
-            height: 240px
-        @include min_desktop
             height: 360px
         @include desktop
             height: 460px
@@ -193,7 +176,19 @@
             font-size: 18px
         @include min_desktop
             font-size: 20px
-
+// Svg
+#mouse
+    width: 32px
+    height: 48px
+    stroke: $textblack
+    stroke-width: 2.5
+    stroke-linecap: round
+    & rect
+        fill: none
+    @include pad
+        transform: scale(0.8)
+    @include min_desktop
+        transform: scale(1)
 
 //--- Skills ---//
 .skill_box
@@ -201,19 +196,39 @@
     border: 1px solid $border
     border-radius: 10px
     display: inline-block
-    margin: 0 24px
     & > :first-child
         display: flex
         justify-content: center
         margin: 16px 0
     @include pad
         padding: 16px 32px
+        margin: 0 16px
     @include min_desktop
         padding: 16px 48px
+        margin: 0 24px
 .skill_item
     padding: 12px 0
     & > :first-child
-        width: 128px
+        @include pad
+            width: 108px
+        @include min_desktop
+            width: 128px
+    .content_title
+        @include pad
+            font-size: 18px
+        @include min_desktop
+            font-size: 20px
+// Svg
+.level
+    // width: 50px
+    height: 10px
+    stroke: #dbdbdb
+    stroke-width: 5
+    stroke-linecap: round
+    @include pad
+        width: 40px
+    @include min_desktop
+        width: 50px
 
 /* -------------------- */
 //--- Services ---//
@@ -244,7 +259,7 @@
         @include desktop
             font-size: 36px
     .content_title
-        @include min_desktop
+        @include pad
             font-size: 18px
         @include desktop
             font-size: 20px
