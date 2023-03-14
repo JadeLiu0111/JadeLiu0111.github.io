@@ -20,9 +20,12 @@
     flex-wrap: wrap
     padding: 64px 0
 .content_title
-    font-size: 20px
     font-weight: 600
     letter-spacing: 0.5px
+    @include pad
+        font-size: 16px
+    @include min_desktop
+        font-size: 20px
 .content_text
     font-size: 18px
     text-align: justify
@@ -36,6 +39,10 @@
     stroke-linecap: round
     & rect
         fill: none
+    @include pad
+        transform: scale(0.8)
+    @include min_desktop
+        transform: scale(1)
 .level
     width: 50px
     height: 10px
@@ -99,7 +106,10 @@
     width: 100%
     height: 100%
 .nav_space
-    height: 56px
+    @include pad
+        height: 40px
+    @include min_desktop
+        height: 56px
 .nav
     background-color: $bgc-main
     position: sticky
@@ -110,13 +120,17 @@
     .nav_content
         justify-content: space-between
 .nav_item
-    font-size: 28px
-    padding: 16px 24px
     transition: 0.5s
     cursor: pointer
     &:hover
         color: $dark-cyan
         transform: scale(1.05)
+    @include pad
+        font-size: 24px
+        padding: 16px
+    @include min_desktop
+        font-size: 28px
+        padding: 16px 24px
 
 
 /* -------------------- */
@@ -128,20 +142,48 @@
 .intro_image
     & :nth-child(1)
         position: absolute
-        top: 250px
-        left: -50px
-        width: 480px
         object-fit: cover
+        @include pad
+            top: 130px
+            left: -50px
+            width: 280px
+        @include min_desktop
+            top: 200px
+            width: 400px
+        @include desktop
+            top: 250px
+            width: 480px
     & :nth-child(2)
-        height: 460px
+        @include pad
+            height: 240px
+        @include min_desktop
+            height: 360px
+        @include desktop
+            height: 460px
 
 .intro_title
-    font-size: 48px
+    @include pad
+        font-size: 32px
+    @include min_desktop
+        font-size: 40px
+    @include desktop
+        font-size: 48px
 
 .intro_offer
-    font-size: 22px
-    margin-top: 64px
-
+    @include pad
+        font-size: 16px
+        margin-top: 32px
+    @include min_desktop
+        font-size: 18px
+        margin-top: 48px
+    @include desktop
+        font-size: 22px
+        margin-top: 64px
+    .offer_item
+        @include pad
+            margin-right: 24px
+        @include min_desktop
+            margin-right: 32px
 .intro_scroll
     width: 100%
     justify-content: center

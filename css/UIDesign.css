@@ -199,7 +199,7 @@ img {
 /* -------------------- */
 /* -------------------- */
 .main_title {
-  font-size: 48px;
+  font-size: 32px;
   padding: 40px 0;
 }
 @media (max-width: 767px) {
