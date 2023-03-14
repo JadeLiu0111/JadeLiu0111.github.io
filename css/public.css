@@ -149,6 +149,8 @@ img {
   padding: 32px 0;
 }
 #footer .footer_tel, #footer .footer_email {
+  width: 30%;
+  display: inline-block;
   white-space: nowrap;
   margin: 0 24px;
   font-size: 18px;

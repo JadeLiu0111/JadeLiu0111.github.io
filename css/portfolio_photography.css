@@ -151,6 +151,9 @@ img {
   padding: 32px 0;
 }
 #footer .footer_tel, #footer .footer_email {
+  width: 30%;
+  display: inline-block;
+  white-space: nowrap;
   margin: 0 24px;
   font-size: 18px;
   letter-spacing: 1.5;
@@ -163,6 +166,9 @@ img {
   height: 100%;
   cursor: pointer;
   z-index: 40;
+}
+#footer .footer_tel span, #footer .footer_email span {
+  white-space: nowrap;
 }
 
 .material-symbols-rounded {
@@ -476,7 +482,7 @@ img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  height: calc(100vh - 223.19px);
+  height: calc(100vh - 116.8px);
   margin: 0 32px;
 }
 
