@@ -6,7 +6,8 @@
     font-size: 32px
     font-weight: 600
     margin: 96px 0 12px 0
-    letter-spacing: 0.5px
+    @include min_desktop
+        letter-spacing: 0.5px
 .subtitle
     display: flex
     justify-content: center
@@ -21,11 +22,9 @@
     padding: 64px 0
 .content_title
     font-weight: 600
-    letter-spacing: 0.5px
-    @include pad
-        font-size: 16px
+    font-size: 20px
     @include min_desktop
-        font-size: 20px
+        letter-spacing: 0.5px
 .content_text
     font-size: 18px
     text-align: justify
@@ -189,6 +188,11 @@
     justify-content: center
     position: absolute
     bottom: 24px
+    .content_title
+        @include pad
+            font-size: 18px
+        @include min_desktop
+            font-size: 20px
 
 
 //--- Skills ---//
@@ -196,13 +200,16 @@
     background-color: #fff
     border: 1px solid $border
     border-radius: 10px
-    padding: 16px 48px
     display: inline-block
     margin: 0 24px
     & > :first-child
         display: flex
         justify-content: center
         margin: 16px 0
+    @include pad
+        padding: 16px 32px
+    @include min_desktop
+        padding: 16px 48px
 .skill_item
     padding: 12px 0
     & > :first-child
@@ -429,11 +436,14 @@
 //     margin: 16px
 //     padding: 24px
 .portfolio_workbox
-    width: 30%
     margin: 16px
     cursor: pointer
     overflow: hidden
     border-radius: 16px
+    @include pad
+        width: 45%
+    @include min_desktop
+        width: 30%
     .portfolio_mask
         width: 100%
         height: 100%

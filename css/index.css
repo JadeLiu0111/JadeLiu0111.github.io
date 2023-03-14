@@ -149,6 +149,8 @@ img {
   padding: 32px 0;
 }
 #footer .footer_tel, #footer .footer_email {
+  width: 30%;
+  display: inline-block;
   white-space: nowrap;
   margin: 0 24px;
   font-size: 18px;
@@ -189,7 +191,11 @@ img {
   font-size: 32px;
   font-weight: 600;
   margin: 96px 0 12px 0;
-  letter-spacing: 0.5px;
+}
+@media (min-width: 992px) {
+  .title {
+    letter-spacing: 0.5px;
+  }
 }
 
 .subtitle {
@@ -209,16 +215,11 @@ img {
 
 .content_title {
   font-weight: 600;
-  letter-spacing: 0.5px;
-}
-@media (min-width: 768px) {
-  .content_title {
-    font-size: 16px;
-  }
+  font-size: 20px;
 }
 @media (min-width: 992px) {
   .content_title {
-    font-size: 20px;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -468,12 +469,21 @@ img {
   position: absolute;
   bottom: 24px;
 }
+@media (min-width: 768px) {
+  .intro_scroll .content_title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .intro_scroll .content_title {
+    font-size: 20px;
+  }
+}
 
 .skill_box {
   background-color: #fff;
   border: 1px solid #CECECE;
   border-radius: 10px;
-  padding: 16px 48px;
   display: inline-block;
   margin: 0 24px;
 }
@@ -481,6 +491,16 @@ img {
   display: flex;
   justify-content: center;
   margin: 16px 0;
+}
+@media (min-width: 768px) {
+  .skill_box {
+    padding: 16px 32px;
+  }
+}
+@media (min-width: 992px) {
+  .skill_box {
+    padding: 16px 48px;
+  }
 }
 
 .skill_item {
@@ -808,11 +828,20 @@ img {
 }
 
 .portfolio_workbox {
-  width: 30%;
   margin: 16px;
   cursor: pointer;
   overflow: hidden;
   border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .portfolio_workbox {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio_workbox {
+    width: 30%;
+  }
 }
 .portfolio_workbox .portfolio_mask {
   width: 100%;
