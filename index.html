@@ -9,12 +9,15 @@
 <body>
 	<div class="wrapper">
 		<div class="main_bg">
-			<img id="bg_element01" src="img/bg01.png" alt="">
+			<!-- <img id="bg_element01" src="img/bg01.png" alt=""> -->
 		</div>
 		<header class="header">
 			<div class="nav_space"></div>
-			<div class="nav">
+			<div id="nav" class=" ">
 				<div class="container row nav_content">
+					<div onclick="nav_close()">
+						<span class="material-symbols-rounded nav_close">close</span>
+					</div>
 					<div class="row">
 						<a class="nav_item" onclick="scroll_intro()">Resume</a>
 						<a class="nav_item" onclick="scroll_skills()">Skill</a>
@@ -27,6 +30,9 @@
 					</div>
 				</div>
 			</div>
+			<div id="nav_menu" onclick="nav_open()">
+				<span class="material-symbols-rounded nav_menu nav_show">menu</span>
+			</div>
 		</header>
 		<section>
 			<div id="intro" class="intro row">
@@ -36,7 +42,7 @@
 							<img src="img/self-image-bg.png" data-speed="-4" class="moveobj">
 							<img src="img/self-image.png">					
 						</div>
-						<div>
+						<div class="intro_text">
 							<div class="intro_title">
 								<div>你好，我是<span class="u-ml-32 color-main">劉芳瑜</span></div>
 								<div>Hi, I'm Jade Liu</div>
@@ -650,18 +656,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="workbox">
-							<div class="image_box">
-								<div class="image_fit">
-									<img class="image" src="img/work-teach01.jpg" alt="">
-								</div>								
-							</div>
-							<div class="workbox_title">教學演練</div>
-							<div class="more">
-								<span class="more_text u-mr-8">Show More</span>
-								<span class="material-symbols-rounded">arrow_forward</span>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -671,12 +665,12 @@
 				<div class="footer_tel">
 					<a href="tel:+886-911355699"></a>
 					<span class="material-symbols-rounded u-mr-8">call</span>
-					<span>+886-911355699</span>
+					+886-911355699
 				</div>
 				<div class="footer_email">
 					<a href="mailto:jadeliu0111@gmail.com"></a>
 					<span class="material-symbols-rounded u-mr-8">mail</span>
-					<span>jadeliu0111@gmail.com</span>
+					jadeliu0111@gmail.com
 				</div>
 				<div>
 					Copyright © 2023 Liu, Fang-yu. All rights reserved.

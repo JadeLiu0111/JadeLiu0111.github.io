@@ -191,7 +191,7 @@ img {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .container {
     padding: 0 16px;
   }
@@ -209,7 +209,7 @@ img {
   font-size: 32px;
   padding: 40px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .main_title {
     font-size: 40px;
   }
@@ -224,7 +224,7 @@ img {
   transform: scale(1.05);
   color: #368f8b;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .subtitle {
     padding: 44px 16px 0 16px;
     font-size: 18px;
@@ -398,8 +398,7 @@ img {
   top: 0;
   left: 0;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .image_L {
@@ -414,7 +413,7 @@ img {
   margin: 32px 0;
   padding: 0 56px;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .content {
     padding: 0 16px;
     margin: 24px 0;
@@ -480,8 +479,7 @@ img {
 }
 .swiper-slide img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: calc(100vh - 116.8px);
   margin: 0 32px;
 }

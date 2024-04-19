@@ -149,6 +149,9 @@ img {
   padding: 32px 0;
 }
 #footer .footer_tel, #footer .footer_email {
+  width: 30%;
+  display: inline-block;
+  white-space: nowrap;
   margin: 0 24px;
   font-size: 18px;
   letter-spacing: 1.5;
@@ -161,6 +164,9 @@ img {
   height: 100%;
   cursor: pointer;
   z-index: 40;
+}
+#footer .footer_tel span, #footer .footer_email span {
+  white-space: nowrap;
 }
 
 .material-symbols-rounded {
@@ -183,7 +189,7 @@ img {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .container {
     padding: 0 16px;
   }
@@ -201,7 +207,7 @@ img {
   font-size: 32px;
   padding: 40px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .main_title {
     font-size: 40px;
   }
@@ -216,7 +222,7 @@ img {
   transform: scale(1.05);
   color: #368f8b;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .subtitle {
     padding: 44px 16px 0 16px;
     font-size: 18px;
@@ -390,8 +396,7 @@ img {
   top: 0;
   left: 0;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .image_L {
@@ -406,7 +411,7 @@ img {
   margin: 32px 0;
   padding: 0 56px;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .content {
     padding: 0 16px;
     margin: 24px 0;

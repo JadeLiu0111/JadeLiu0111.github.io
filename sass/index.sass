@@ -6,8 +6,7 @@
     font-size: 32px
     font-weight: 600
     margin: 96px 0 12px 0
-    @include min_desktop
-        letter-spacing: 0.5px
+    letter-spacing: 0.5px
 .subtitle
     display: flex
     justify-content: center
@@ -15,6 +14,7 @@
     color: $textgray
     // margin-bottom: 48px
 .content
+    width: 100%
     display: flex
     align-items: flex-start
     justify-content: center
@@ -23,13 +23,10 @@
 .content_title
     font-weight: 600
     font-size: 20px
-    @include min_desktop
-        letter-spacing: 0.5px
+    letter-spacing: 0.5px
 .content_text
     font-size: 18px
     text-align: justify
-
-
 
 
 
@@ -60,9 +57,13 @@
 .bg_element02--left
     @include bg_element02
     left: -70vh
+    @include desktops_max
+        left: -80vh
 .bg_element02--right
     @include bg_element02
     left: calc( 100% - 20vh )
+    @include desktops_max
+        left: calc( 100% - 10vh )
 @mixin bg_square($w, $h)
     width: $w
     height: $h
@@ -88,31 +89,78 @@
     width: 100%
     height: 100%
 .nav_space
-    @include pad
+    height: 56px
+    @include desktops_max
         height: 40px
-    @include min_desktop
-        height: 56px
-.nav
+    @include tablets_max
+        display: none
+        opacity: 0
+      
+#nav
     background-color: $bgc-main
     position: sticky
     position: -webkit-sticky
     top: 0
     z-index: 50
     width: 100%
+    @include tablets_max
+        width: 60%
+        height: 100vh
+        background-color: $dark-cyan
+        float: right
+        display: none
+        opacity: 0
+        visibility: hidden
     .nav_content
         justify-content: space-between
+        @include tablets_max
+            flex-direction: column
+            & :nth-child(2)
+                flex-direction: column
+#nav.nav_show
+    @include tablets_max
+        display: inline-block
+        opacity: 1 
+        visibility: visible
+.flex_col
+    flex-direction: column
 .nav_item
     transition: 0.5s
     cursor: pointer
+    font-size: 28px
+    padding: 16px 24px
     &:hover
         color: $dark-cyan
         transform: scale(1.05)
-    @include pad
+        @include tablets_max
+            color: $dark-purple
+    @include desktops_max
         font-size: 24px
         padding: 16px
-    @include min_desktop
-        font-size: 28px
-        padding: 16px 24px
+    @include tablets_max
+        color: $bgc
+.material-symbols-rounded.nav_menu, .material-symbols-rounded.nav_close
+    font-size: 40px
+    padding: 24px
+    cursor: pointer
+.material-symbols-rounded.nav_menu
+    z-index: 50
+    float: right
+    display: none
+    opacity: 0
+    @include tablets_max
+        display: inline-block
+        opacity: 1
+.material-symbols-rounded.nav_close
+    color: $bgc
+    display: none
+    opacity: 0
+    visibility: hidden
+    @include tablets_max
+        display: inline-block
+        opacity: 1
+        visibility: visible
+
 
 
 /* -------------------- */
@@ -130,52 +178,64 @@
     & :nth-child(1)
         position: absolute
         object-fit: cover
-        @include pad
+        top: 250px
+        width: 480px
+        @include large_device
             top: 200px
             left: -50px
             width: 400px
-        @include desktop
-            top: 250px
-            width: 480px
+        @include mobile_max
+            width: 340px    
     & :nth-child(2)
-        @include pad
+        height: 460px
+        @include large_device
             height: 360px
-        @include desktop
-            height: 460px
-
+        @include mobile_max
+            height: 300px
+.intro_text
+    @include mobile_max
+        display: flex
+        flex-direction: column
+        align-items: center
 .intro_title
-    @include pad
-        font-size: 32px
-    @include min_desktop
+    font-size: 48px
+    @include large_device
         font-size: 40px
-    @include desktop
-        font-size: 48px
+    @include desktops_max
+        font-size: 32px
 
 .intro_offer
-    @include pad
-        font-size: 16px
-        margin-top: 32px
-    @include min_desktop
+    font-size: 22px
+    margin-top: 64px
+    @include large_device
         font-size: 18px
         margin-top: 48px
-    @include desktop
-        font-size: 22px
-        margin-top: 64px
+    @include desktops_max
+        font-size: 16px
+        margin-top: 32px
+    @include mobile_max
+        width: 288px
+        
     .offer_item
-        @include pad
+        margin-right: 32px
+        @include desktops_max
             margin-right: 24px
-        @include min_desktop
-            margin-right: 32px
+        @include mobile_max
+            // width: 500px
+            span
+                font-size: 18px
+        
+            
 .intro_scroll
     width: 100%
     justify-content: center
     position: absolute
     bottom: 24px
     .content_title
-        @include pad
+        font-size: 20px
+        @include desktops_max
             font-size: 18px
-        @include min_desktop
-            font-size: 20px
+            
 // Svg
 #mouse
     width: 32px
@@ -185,39 +245,40 @@
     stroke-linecap: round
     & rect
         fill: none
-    @include pad
-        transform: scale(0.8)
-    @include min_desktop
         transform: scale(1)
+    @include desktops_max
+        transform: scale(0.8)
+        
 
 //--- Skills ---//
 .skill_box
     background-color: #fff
     border: 1px solid $border
     border-radius: 10px
-    display: inline-block
+    // display: inline-block
+    padding: 16px 48px
+    margin: 0 24px
     & > :first-child
         display: flex
         justify-content: center
         margin: 16px 0
-    @include pad
+    @include desktops_max
         padding: 16px 32px
         margin: 0 16px
-    @include min_desktop
-        padding: 16px 48px
-        margin: 0 24px
+    @include tablets_max
+        margin-bottom: 24px
+    
 .skill_item
     padding: 12px 0
     & > :first-child
-        @include pad
+        width: 128px
+        @include desktops_max
             width: 108px
-        @include min_desktop
-            width: 128px
     .content_title
-        @include pad
+        font-size: 20px
+        @include desktops_max
             font-size: 18px
-        @include min_desktop
-            font-size: 20px
+            
 // Svg
 .level
     // width: 50px
@@ -225,10 +286,10 @@
     stroke: #dbdbdb
     stroke-width: 5
     stroke-linecap: round
-    @include pad
+    width: 50px
+    @include desktops_max
         width: 40px
-    @include min_desktop
-        width: 50px
+        
 
 /* -------------------- */
 //--- Services ---//
@@ -238,31 +299,35 @@
     border-radius: 10px
     border: 1px solid $border
     background-color: $bgc-main
+    width: 240px
+    padding: 72px 32px 32px
+    margin: 0 16px
     & > div
-        margin: 16px 0
-    @include pad
+        margin: 16px 0        
+    @include large_device
+        width: 200px
+        padding: 64px 24px 24px
+    @include desktops_max
         width: 168px
         padding: 64px 16px 16px
         margin: 0 8px
-    @include min_desktop
-        width: 200px
-        padding: 64px 24px 24px
-    @include desktop
+    @include tablets_max
         width: 240px
-        padding: 72px 32px 32px
-        margin: 0 16px
+        padding: 64px 24px 24px
+        margin: 16px
+        
     .material-symbols-rounded
-        @include pad
-            font-size: 28px
-        @include min_desktop
+        font-size: 36px
+        @include large_device
             font-size: 32px
-        @include desktop
-            font-size: 36px
+        @include desktops_max
+            font-size: 28px
+            
     .content_title
-        @include pad
+        font-size: 20px
+        @include large_device
             font-size: 18px
-        @include desktop
-            font-size: 20px
+            
 
         
 .more
@@ -271,8 +336,7 @@
     .more_text, .material-symbols-rounded
         color: $textgray
     .material-symbols-rounded
-        @include pad
-            font-size: 20px
+        font-size: 20px
     &:hover
         .more_text, .material-symbols-rounded
             color: $dark-cyan
@@ -441,7 +505,7 @@
     background-color: $dark-cyan
 .portfolio_works
     width: 100%
-    // justify-content: center
+    justify-content: center
     // display: flex
 // .workbox
 //     background-color: #fff
@@ -455,10 +519,12 @@
     cursor: pointer
     overflow: hidden
     border-radius: 16px
-    @include pad
+    width: 30%
+    @include desktops_max
         width: 45%
-    @include min_desktop
-        width: 30%
+    @include mobile_max
+        width: 80%
+        
     .portfolio_mask
         width: 100%
         height: 100%

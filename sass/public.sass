@@ -61,27 +61,31 @@ img
     -webkit-user-drag: none
 
 // Container
-@mixin mobile_max
-    @media ( max-width: 767px )
-        @content
-@mixin pad_max
-    @media ( max-width: 992px )
-        @content
-@mixin min_desktop_max
+@mixin large_device
     @media ( max-width: 1200px )
         @content
-@mixin mobile
-    @media ( min-width: 360px )
-        @content 
-@mixin pad
-    @media ( min-width: 768px )
+@mixin desktops_max
+    @media ( max-width: 992px )
         @content
-@mixin min_desktop
-    @media ( min-width: 992px )
+@mixin tablets_max
+    @media ( max-width: 768px )
         @content
-@mixin desktop
-    @media ( min-width: 1200px )
-        @content    
+@mixin mobile_max
+    @media ( max-width: 576px )
+        @content
+
+// @mixin mobile
+//     @media ( min-width: 360px )
+//         @content 
+// @mixin pad
+//     @media ( min-width: 768px )
+//         @content
+// @mixin min_desktop
+//     @media ( min-width: 992px )
+//         @content
+// @mixin desktop
+//     @media ( min-width: 1200px )
+//         @content    
 
     
 .wrapper
@@ -89,12 +93,14 @@ img
 // 置中容器
 .container
     margin: 0 auto
-    @include pad
-        width: 750px
-    @include min_desktop
+    width: 1170px
+    @include large_device
         width: 970px
-    @include desktop
-        width: 1170px
+    @include desktops_max
+        width: 750px
+    @include tablets_max
+        width: 100%
+        
 .row
     display: flex
     flex-wrap: wrap
@@ -151,7 +157,7 @@ img
     justify-content: center
     padding: 32px 0
     .footer_tel, .footer_email
-        width: 30%
+        // width: 30%
         display: inline-block
         white-space: nowrap
         margin: 0 24px
@@ -165,8 +171,6 @@ img
             height: 100%
             cursor: pointer
             z-index: 40
-        span
-            white-space: nowrap
 .material-symbols-rounded
     vertical-align: middle
 .material-symbols-rounded.hover

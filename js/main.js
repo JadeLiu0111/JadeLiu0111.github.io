@@ -42,6 +42,26 @@ const scroll_portfolio = () => {
 const scroll_contact = () => {
     scrollSection('#footer', "end");
 }
+// Tablet size menu
+let navbar = document.querySelector('#nav');
+let nav_menu = document.querySelector('#nav_menu');
+// let newDiv = document.createElement('div');
+// let newSpan = document.createElement('span');
+// let nav_c = newSpan.setAttribute("class", "material-symbols-rounded nav_close").textContent = "close";
+// let nav_firstChild = navbar.firstChild.firstChild;
+// 展開menu
+function nav_open(){
+    nav_menu.classList.add('disable');
+    navbar.classList.add('nav_show');
+    // let icon = newDiv.setAttribute("onclick", "nav_close()").appendChild(nav_c);
+    // navbar.firstChild.insertBefore(icon, nav_firstChild);
+}
+// 關閉menu
+function nav_close(){
+    navbar.classList.remove('nav_show');
+    nav_menu.classList.remove('disable');
+}
+
 
 // Services燈箱
 let services_web = document.querySelector('#service-web');
